@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #f4f6f9;
+        }
+
+        /* Top Navbar */
+        .navbar {
+            background: #2c3e50;
+            color: white;
+            padding: 15px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        /* Main container */
+        .container {
+            padding: 30px;
+            text-align: center;
+        }
+
+        /* Card Design */
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Image */
+        .card img {
+            width: 100px;
+            border-radius: 50%;
+        }
+
+        /* Button */
+        .btn {
+            background: #3498db;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #2980b9;
+        }
+
+        /* Logout */
+        .logout {
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    🔐 2FA Dashboard
+</div>
+
+<!-- Main Content -->
+<div class="container">
+
+    <!-- Profile Card -->
+    <div class="card">
+        <img src="{{ url_for('static', filename='user.png') }}">
+        <h2>Welcome User 👋</h2>
+        <p>You have successfully logged in using 2FA</p>
+    </div>
+
+    <!-- Feature Card -->
+    <div class="card">
+        <h3>Security Status</h3>
+        <p style="color:green;">✔ Two-Factor Authentication Enabled</p>
+    </div>
+
+    <!-- Logout Button -->
+    <div class="logout">
+        <a href="/logout">
+            <button class="btn">Logout</button>
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>
